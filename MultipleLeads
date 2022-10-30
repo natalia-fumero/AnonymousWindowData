@@ -1,0 +1,10 @@
+List<Lead> newLeads = List<Lead>();
+for(Integer i = 1; i <=100; i ++){
+  Lead le = new Lead();
+  le.LastName = 'Tester#' + i;
+  le.Company = 'Test Company ' + i;
+  le.Status = 'New';
+  newLeads.add(le);
+}
+
+INSERT newLeads;
