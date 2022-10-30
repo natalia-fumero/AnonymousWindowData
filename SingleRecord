@@ -1,7 +1,5 @@
 //Single record creation (insertion)
-
 Car__c c = new Car__c(Name = 'Tesla'); //Since Car is a custom object its name is appended with "__c" in Salesforce
-
 insert c;
 
 
