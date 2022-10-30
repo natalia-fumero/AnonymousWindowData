@@ -1,13 +1,12 @@
-//Single record creation (insertion)
+//Single record creation (INSERT)
 Car__c c = new Car__c(Name = 'Tesla'); //Since Car is a custom object its name is appended with "__c" in Salesforce
 insert c;
-
 
 //Syntax for any object
 ObjectApiName variableName = new ObjectApiName(RequiredFieldName = 'Not a number', otherField = 45);
 insert variableName;
 
-//Now if we wanted to update an object, we would need to query for it first
+//Now if we wanted to UPDATE an object, we would need to query for it first
 ObjectApiName variableName = [SELECT Id FROM ObjectApiName WHERE fieldName = 'sample'];
 variableName.fieldName = 'updated';
 update variableName;
