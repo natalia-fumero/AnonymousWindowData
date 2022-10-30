@@ -1,0 +1,10 @@
+List<Opportunity> newOpps = List<Opportunity>();
+for(Integer i = 1; i <= 500; i ++){
+  Opportunity opp = new Opportunity();
+  opp.Name = 'Opportunity Test ' + i;
+  opp.Stage = 'Prospecting';
+  opp.CloseDate = Date.Today() + 60;
+  newOpps.add(opp);
+}
+
+INSERT newOpps;
