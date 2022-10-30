@@ -1,1 +1,24 @@
+//How to create 200 Car records
+//The Car object has a driver lookup field and a name so we're going to first create multiple Drivers
+//For this example, I'm going to pretend the Driver only has a name and ID fields
+
+list<Driver__c> newDrivers = new list<Driver__c>(); 
+for(Integer d = 1; d <=200; d++){
+  Driver__c tempDriver = new Driver__c(Name = 'Driver Test' + 1);
+  newDrivers.tempDriver;
+}
+insert newDrivers;
+
+//Alternatively I could have queried for 200 Drivers, put them in a list and do the following still...
+
+list<Car__c> newCars = new List<Car__c>();
+for(eachDriver:newDrivers){
+    Car__c tempCar = new Car(Name = 'Car for ' + eachDriver.Name, Driver__c = eachDriver.Id); 
+    //here I'm defferentiating each Car record's name by concatinating the name of the driver onto it since I didn't use an iteration number
+    newCars.add(tempCar);
+    
+}
+insert newCars;
+
+
 
